@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.controller.NuevaEncomiendaController">
+
+    <children>
+
+        <VBox spacing="12"
+              AnchorPane.topAnchor="20"
+              AnchorPane.leftAnchor="20">
+
+            <children>
+
+                <Label text="REGISTRAR ENCOMIENDA"
+                       style="-fx-font-size:20px;
+                              -fx-font-weight:bold;"/>
+
+                <TextField fx:id="txtCodigo"
+                           promptText="Código"/>
+
+                <TextField fx:id="txtRemitente"
+                           promptText="Remitente"/>
+
+                <TextField fx:id="txtDestinatario"
+                           promptText="Destinatario"/>
+
+                <TextField fx:id="txtOrigen"
+                           promptText="Origen"/>
+
+                <TextField fx:id="txtDestino"
+                           promptText="Destino"/>
+
+                <TextArea fx:id="txtDescripcion"
+                          prefHeight="80"
+                          promptText="Descripción"/>
+
+                <TextField fx:id="txtPeso"
+                           promptText="Peso"/>
+
+                <TextField fx:id="txtPrecio"
+                           promptText="Precio"/>
+
+                <DatePicker fx:id="dpFecha"/>
+
+                <ComboBox fx:id="cbEstado"/>
+
+                <HBox spacing="10">
+
+                    <children>
+
+                        <Button text="Guardar"
+                                onAction="#guardar"/>
+
+                        <Button text="Cancelar"
+                                onAction="#cancelar"/>
+
+                    </children>
+
+                </HBox>
+
+            </children>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.controller.EncomiendaController">
+
+    <children>
+
+        <VBox spacing="15"
+              prefWidth="950"
+              prefHeight="650"
+              AnchorPane.topAnchor="15"
+              AnchorPane.leftAnchor="15"
+              AnchorPane.rightAnchor="15">
+
+            <children>
+
+                <Label text="GESTIÓN DE ENCOMIENDAS"
+                       style="-fx-font-size:22px;
+                              -fx-font-weight:bold;" />
+                <HBox spacing="20">
+
+                    <children>
+
+                        <VBox spacing="5"
+                              style="-fx-background-color:#DCEEFF;
+                     -fx-padding:15;
+                     -fx-background-radius:10;">
+
+                            <children>
+                                <Label text="TOTAL"/>
+                                <Label fx:id="lblTotal"
+                                       text="0"/>
+                            </children>
+
+                        </VBox>
+
+                        <VBox spacing="5"
+                              style="-fx-background-color:#FFF3CD;
+                     -fx-padding:15;
+                     -fx-background-radius:10;">
+
+                            <children>
+                                <Label text="PENDIENTES"/>
+                                <Label fx:id="lblPendiente"
+                                       text="0"/>
+                            </children>
+
+                        </VBox>
+
+                        <VBox spacing="5"
+                              style="-fx-background-color:#CCE5FF;
+                     -fx-padding:15;
+                     -fx-background-radius:10;">
+
+                            <children>
+                                <Label text="EN CAMINO"/>
+                                <Label fx:id="lblEnCamino"
+                                       text="0"/>
+                            </children>
+
+                        </VBox>
+
+                        <VBox spacing="5"
+                              style="-fx-background-color:#D4EDDA;
+                     -fx-padding:15;
+                     -fx-background-radius:10;">
+
+                            <children>
+                                <Label text="ENTREGADAS"/>
+                                <Label fx:id="lblEntregado"
+                                       text="0"/>
+                            </children>
+
+                        </VBox>
+
+                    </children>
+
+                </HBox>
+
+                <HBox spacing="10">
+
+                    <children>
+
+                        <Button text="Nueva"
+                                onAction="#nuevo"/>
+
+                        <Button text="Editar"
+                                onAction="#editar"/>
+
+                        <Button text="Eliminar"
+                                onAction="#eliminar"/>
+
+                        <Button text="Actualizar Estado"
+                                onAction="#actualizarEstado"/>
+
+                    </children>
+
+                </HBox>
+
+                <HBox spacing="10">
+
+                    <children>
+
+                        <TextField fx:id="txtBuscar"
+                                   promptText="Buscar por código..."
+                                   prefWidth="250"/>
+
+                        <Button text="Buscar"
+                                onAction="#buscar"/>
+
+                        <ComboBox fx:id="cbFiltroEstado"
+                                  prefWidth="180"/>
+
+                    </children>
+
+                </HBox>
+
+                <TableView fx:id="tablaEncomiendas"
+                           prefHeight="500">
+
+                    <columns>
+
+                        <TableColumn fx:id="colCodigo"
+                                     text="Código"
+                                     prefWidth="120"/>
+
+                        <TableColumn fx:id="colRemitente"
+                                     text="Remitente"
+                                     prefWidth="150"/>
+
+                        <TableColumn fx:id="colDestinatario"
+                                     text="Destinatario"
+                                     prefWidth="150"/>
+
+                        <TableColumn fx:id="colOrigen"
+                                     text="Origen"
+                                     prefWidth="120"/>
+
+                        <TableColumn fx:id="colDestino"
+                                     text="Destino"
+                                     prefWidth="120"/>
+
+                        <TableColumn fx:id="colEstado"
+                                     text="Estado"
+                                     prefWidth="120"/>
+
+                        <TableColumn fx:id="colPeso"
+                                     text="Peso"
+                                     prefWidth="80"/>
+
+                        <TableColumn fx:id="colPrecio"
+                                     text="Precio"
+                                     prefWidth="80"/>
+
+                    </columns>
+
+                </TableView>
+
+            </children>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>
