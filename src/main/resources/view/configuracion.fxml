@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.controller.ConfiguracionController"
+            style="-fx-background-color:#F8FAFC;">
+
+    <children>
+
+        <VBox spacing="15"
+              layoutX="30"
+              layoutY="30"
+            style="-fx-background-color:white;
+            -fx-background-radius:20;
+            -fx-border-color:#7C3AED;
+            -fx-border-width:3;
+            -fx-border-radius:20;
+            -fx-padding:25;">
+
+            <children>
+
+                <Label text="⚙ CONFIGURACIÓN"
+                       style="-fx-font-size:32px;
+       -fx-font-weight:bold;
+       -fx-text-fill:#7C3AED;" />
+
+                <Label text="Información del sistema"
+                       style="-fx-font-size:14px;" />
+
+                <Label text="Sistema de Gestión de Encomiendas"
+                       style="-fx-font-size:18px;
+                              -fx-font-weight:bold;" />
+
+                <Label text="Versión: 1.0" />
+
+                <Label text="Base de Datos: SQLite" />
+
+                <Label text="Lenguaje: Java 21" />
+
+                <Label text="Framework: JavaFX" />
+
+                <Label text="Arquitectura: MVC + Capas" />
+
+                <Label text="Repositorio: SQLite Repository Pattern" />
+
+                <Label text="Estado del sistema: Operativo" />
+
+            </children>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

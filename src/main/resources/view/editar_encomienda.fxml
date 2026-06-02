@@ -48,8 +48,19 @@
 
                 <ComboBox fx:id="cbEstado"/>
 
-                <Button text="Actualizar"
-                        onAction="#guardar"/>
+                <HBox spacing="10">
+
+                    <children>
+
+                        <Button text="Actualizar"
+                                onAction="#guardar"/>
+
+                        <Button text="Cancelar"
+                                onAction="#cancelar"/>
+
+                    </children>
+
+                </HBox>
 
             </children>
 

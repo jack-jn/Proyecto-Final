@@ -1,6 +1,8 @@
 package pe.edu.upeu.utils;
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
 public class AlertUtil {
 
@@ -24,5 +26,21 @@ public class AlertUtil {
         alert.setContentText(mensaje);
 
         alert.showAndWait();
+    }
+    public static boolean confirmar(
+            String titulo,
+            String mensaje) {
+
+        Alert alert = new Alert(
+                Alert.AlertType.CONFIRMATION
+        );
+
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+
+        return alert.showAndWait()
+                .orElse(ButtonType.CANCEL)
+                == ButtonType.OK;
     }
 }

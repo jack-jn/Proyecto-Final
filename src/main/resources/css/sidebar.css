@@ -1,0 +1,44 @@
+.button {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10;
+
+    -fx-cursor: hand;
+
+    -fx-pref-width: 200;
+    -fx-pref-height: 45;
+}
+
+.sidebar-button:hover {
+
+    -fx-background-color: #475569;
+}
+
+.logout-button {
+
+    -fx-background-color: #DC2626;
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10;
+
+    -fx-cursor: hand;
+
+    -fx-pref-width: 200;
+    -fx-pref-height: 45;
+}
+
+.logout-button:hover {
+
+    -fx-background-color: #B91C1C;
+}

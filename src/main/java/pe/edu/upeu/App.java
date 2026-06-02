@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import pe.edu.upeu.repository.ConexionBD;
+import javafx.scene.image.Image;
+
 public class App extends Application {
 
     @Override
@@ -26,5 +28,12 @@ public class App extends Application {
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();
+        stage.getIcons().add(
+                new Image(
+                        getClass().getResourceAsStream(
+                                "/images/package.png"
+                        )
+                )
+        );
     }
 }

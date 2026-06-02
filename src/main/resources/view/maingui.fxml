@@ -4,27 +4,105 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
 <AnchorPane prefHeight="700.0"
             prefWidth="1200.0"
+            stylesheets="@../css/sidebar.css"
             xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="pe.edu.upeu.controller.MainGuiController">
 
     <VBox prefWidth="220.0"
           prefHeight="700.0"
+          alignment="TOP_CENTER"
+          spacing="20"
           style="-fx-background-color:#1E293B;">
 
         <children>
 
-            <Label text="ENCOMIENDAS"
-                   style="-fx-text-fill:white;
-                          -fx-font-size:20px;
-                          -fx-font-weight:bold;" />
+            <ImageView fitHeight="100"
+                       fitWidth="100"
+                       preserveRatio="true">
 
-            <Button text="Gestión Encomiendas"
+                <image>
+                    <Image url="@../images/logo.png"/>
+                </image>
+
+            </ImageView>
+
+            <Label text="SISTEMA DE
+ENCOMIENDAS"
+                   style="-fx-text-fill:white;
+              -fx-font-size:18px;
+              -fx-font-weight:bold;" />
+
+            <Button text="📊 Dashboard"
+                    onAction="#abrirDashboard"
+                    prefWidth="200"
+                    prefHeight="45"
+                    style="-fx-background-color:#334155;
+               -fx-text-fill:white;
+               -fx-font-size:14px;
+               -fx-font-weight:bold;
+               -fx-background-radius:10;
+               -fx-cursor:hand;"/>
+
+            <Button text="📦 Encomiendas"
                     onAction="#abrirEncomiendas"
-                    prefWidth="200"/>
+                    prefWidth="200"
+                    prefHeight="45"
+                    style="-fx-background-color:#334155;
+               -fx-text-fill:white;
+               -fx-font-size:14px;
+               -fx-font-weight:bold;
+               -fx-background-radius:10;
+               -fx-cursor:hand;"/>
+
+            <Button text="👥 Clientes"
+                    onAction="#abrirClientes"
+                    prefWidth="200"
+                    prefHeight="45"
+                    style="-fx-background-color:#334155;
+               -fx-text-fill:white;
+               -fx-font-size:14px;
+               -fx-font-weight:bold;
+               -fx-background-radius:10;
+               -fx-cursor:hand;"/>
+
+            <Button text="📑 Reportes"
+                    onAction="#abrirReportes"
+                    prefWidth="200"
+                    prefHeight="45"
+                    style="-fx-background-color:#334155;
+               -fx-text-fill:white;
+               -fx-font-size:14px;
+               -fx-font-weight:bold;
+               -fx-background-radius:10;
+               -fx-cursor:hand;"/>
+
+            <Button text="⚙ Configuración"
+                    onAction="#abrirConfiguracion"
+                    prefWidth="200"
+                    prefHeight="45"
+                    style="-fx-background-color:#334155;
+               -fx-text-fill:white;
+               -fx-font-size:14px;
+               -fx-font-weight:bold;
+               -fx-background-radius:10;
+               -fx-cursor:hand;"/>
+
+            <Button text="🚪 Cerrar Sesión"
+                    onAction="#cerrarSesion"
+                    prefWidth="200"
+                    prefHeight="45"
+                    style="-fx-background-color:#DC2626;
+               -fx-text-fill:white;
+               -fx-font-size:14px;
+               -fx-font-weight:bold;
+               -fx-background-radius:10;
+               -fx-cursor:hand;"/>
 
         </children>
 

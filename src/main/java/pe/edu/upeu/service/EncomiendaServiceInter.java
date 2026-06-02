@@ -17,8 +17,8 @@ public interface EncomiendaServiceInter {
     List<Encomienda> listar();
 
     Encomienda buscarPorCodigo(String codigo);
+
     int contarTotal();
 
     int contarPorEstado(String estado);
-
 }

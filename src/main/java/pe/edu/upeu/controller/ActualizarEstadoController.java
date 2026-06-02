@@ -7,11 +7,18 @@ import pe.edu.upeu.enums.EstadoEncomienda;
 import pe.edu.upeu.model.Encomienda;
 import pe.edu.upeu.service.EncomiendaServiceImp;
 import pe.edu.upeu.utils.AlertUtil;
+import javafx.scene.control.Label;
 
 public class ActualizarEstadoController {
 
     @FXML
     private ComboBox<EstadoEncomienda> cbEstado;
+    @FXML
+    private Label lblCodigo;
+
+    @FXML
+    private Label lblEstadoActual;
+
 
     private Encomienda encomienda;
     private EncomiendaController encomiendaController;
@@ -28,7 +35,17 @@ public class ActualizarEstadoController {
     }
 
     public void cargarEncomienda(
-            Encomienda encomienda) {
+            Encomienda encomienda)
+    {
+        lblCodigo.setText(
+                "Código: " +
+                        encomienda.getCodigo()
+        );
+
+        lblEstadoActual.setText(
+                "Estado actual: " +
+                        encomienda.getEstado().name()
+        );
 
         this.encomienda = encomienda;
 
@@ -45,6 +62,16 @@ public class ActualizarEstadoController {
     @FXML
     private void actualizar() {
 
+        boolean confirmar =
+                AlertUtil.confirmar(
+                        "Actualizar Estado",
+                        "¿Desea cambiar el estado de la encomienda?"
+                );
+
+        if (!confirmar) {
+            return;
+        }
+
         boolean actualizado =
                 service.actualizarEstado(
                         encomienda.getId(),
@@ -57,9 +84,11 @@ public class ActualizarEstadoController {
                     "Éxito",
                     "Estado actualizado"
             );
-            if(encomiendaController != null){
+
+            if (encomiendaController != null) {
                 encomiendaController.cargarDatos();
             }
+
             cbEstado.getScene()
                     .getWindow()
                     .hide();
@@ -71,5 +100,12 @@ public class ActualizarEstadoController {
                     "No se pudo actualizar"
             );
         }
+    }
+    @FXML
+    private void cancelar() {
+
+        cbEstado.getScene()
+                .getWindow()
+                .hide();
     }
 }

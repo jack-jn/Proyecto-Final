@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.controller.DashboardController"
+            style="-fx-background-color:#F8FAFC;">
+
+    <children>
+
+        <VBox spacing="25"
+              AnchorPane.topAnchor="25"
+              AnchorPane.leftAnchor="25">
+
+            <children>
+
+                <Label text="Dashboard"
+                       style="-fx-font-size:32px;
+                              -fx-font-weight:bold;
+                              -fx-text-fill:#0F172A;" />
+
+                <Label text="Resumen general del sistema"
+                       style="-fx-font-size:14px;
+                              -fx-text-fill:#64748B;" />
+                <HBox spacing="20">
+
+                    <children>
+
+                        <Label text="📅 Fecha:"
+                               style="-fx-font-size:14px;
+                      -fx-font-weight:bold;" />
+
+                        <Label fx:id="lblFecha"
+                               text="00/00/0000"
+                               style="-fx-font-size:14px;" />
+
+                        <Label text="🕒 Hora:"
+                               style="-fx-font-size:14px;
+                      -fx-font-weight:bold;" />
+
+                        <Label fx:id="lblHora"
+                               text="00:00:00"
+                               style="-fx-font-size:14px;" />
+
+                    </children>
+
+                </HBox>
+
+                <HBox spacing="20">
+
+                    <children>
+
+                        <!-- TOTAL -->
+
+                        <VBox prefWidth="220"
+                              prefHeight="130"
+                              alignment="CENTER"
+                              style="-fx-background-color:#DBEAFE;
+                                     -fx-padding:20;
+                                     -fx-background-radius:15;
+                                     -fx-border-radius:15;
+                                     -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.15),10,0,0,4);">
+
+                            <children>
+
+                                <Label text="📦 Total Encomiendas"
+                                       style="-fx-font-size:15px;
+                                              -fx-font-weight:bold;" />
+
+                                <Label fx:id="lblTotal"
+                                       text="0"
+                                       style="-fx-font-size:42px;
+                                              -fx-font-weight:bold;" />
+
+                            </children>
+
+                        </VBox>
+
+                        <!-- PENDIENTES -->
+
+                        <VBox prefWidth="220"
+                              prefHeight="130"
+                              alignment="CENTER"
+                              style="-fx-background-color:#FEF9C3;
+                                     -fx-padding:20;
+                                     -fx-background-radius:15;
+                                     -fx-border-radius:15;
+                                     -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.15),10,0,0,4);">
+
+                            <children>
+
+                                <Label text="⏳ Pendientes"
+                                       style="-fx-font-size:15px;
+                                              -fx-font-weight:bold;" />
+
+                                <Label fx:id="lblPendientes"
+                                       text="0"
+                                       style="-fx-font-size:42px;
+                                              -fx-font-weight:bold;" />
+
+                            </children>
+
+                        </VBox>
+
+                        <!-- EN CAMINO -->
+
+                        <VBox prefWidth="220"
+                              prefHeight="130"
+                              alignment="CENTER"
+                              style="-fx-background-color:#BFDBFE;
+                                     -fx-padding:20;
+                                     -fx-background-radius:15;
+                                     -fx-border-radius:15;
+                                     -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.15),10,0,0,4);">
+
+                            <children>
+
+                                <Label text="🚚 En Camino"
+                                       style="-fx-font-size:15px;
+                                              -fx-font-weight:bold;" />
+
+                                <Label fx:id="lblEnCamino"
+                                       text="0"
+                                       style="-fx-font-size:42px;
+                                              -fx-font-weight:bold;" />
+
+                            </children>
+
+                        </VBox>
+
+                        <!-- ENTREGADAS -->
+
+                        <VBox prefWidth="220"
+                              prefHeight="130"
+                              alignment="CENTER"
+                              style="-fx-background-color:#DCFCE7;
+                                     -fx-padding:20;
+                                     -fx-background-radius:15;
+                                     -fx-border-radius:15;
+                                     -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.15),10,0,0,4);">
+
+                            <children>
+
+                                <Label text="✅ Entregadas"
+                                       style="-fx-font-size:15px;
+                                              -fx-font-weight:bold;" />
+
+                                <Label fx:id="lblEntregadas"
+                                       text="0"
+                                       style="-fx-font-size:42px;
+                                              -fx-font-weight:bold;" />
+
+                            </children>
+
+                        </VBox>
+
+                        <!-- CANCELADAS -->
+
+                        <VBox prefWidth="220"
+                              prefHeight="130"
+                              alignment="CENTER"
+                              style="-fx-background-color:#FECACA;
+                                     -fx-padding:20;
+                                     -fx-background-radius:15;
+                                     -fx-border-radius:15;
+                                     -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.15),10,0,0,4);">
+
+                            <children>
+
+                                <Label text="❌ Canceladas"
+                                       style="-fx-font-size:15px;
+                                              -fx-font-weight:bold;" />
+
+                                <Label fx:id="lblCanceladas"
+                                       text="0"
+                                       style="-fx-font-size:42px;
+                                              -fx-font-weight:bold;" />
+
+                            </children>
+
+                        </VBox>
+
+                    </children>
+
+                </HBox>
+
+            </children>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

@@ -14,30 +14,6 @@ public class EncomiendaServiceImp implements EncomiendaServiceInter {
     }
 
     @Override
-    public boolean actualizarEstado(int id, String estado) {
-
-        return repository.actualizarEstado(
-                id,
-                estado
-        );
-    }
-
-    @Override
-    public int contarTotal() {
-
-        return repository.contarTotal();
-    }
-
-    @Override
-    public int contarPorEstado(
-            String estado) {
-
-        return repository.contarPorEstado(
-                estado
-        );
-    }
-
-    @Override
     public boolean guardar(Encomienda encomienda) {
         return repository.guardar(encomienda);
     }
@@ -60,5 +36,20 @@ public class EncomiendaServiceImp implements EncomiendaServiceInter {
     @Override
     public Encomienda buscarPorCodigo(String codigo) {
         return repository.buscarPorCodigo(codigo);
+    }
+
+    @Override
+    public boolean actualizarEstado(int id, String estado) {
+        return repository.actualizarEstado(id, estado);
+    }
+
+    @Override
+    public int contarTotal() {
+        return repository.contarTotal();
+    }
+
+    @Override
+    public int contarPorEstado(String estado) {
+        return repository.contarPorEstado(estado);
     }
 }

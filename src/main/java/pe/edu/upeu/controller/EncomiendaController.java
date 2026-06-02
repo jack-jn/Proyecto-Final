@@ -12,12 +12,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import pe.edu.upeu.utils.AlertUtil;
-import java.time.LocalDate;
 import javafx.scene.control.Label;
 import javafx.scene.control.ComboBox;
 
 import pe.edu.upeu.model.Encomienda;
 import pe.edu.upeu.service.EncomiendaServiceImp;
+import pe.edu.upeu.utils.PdfUtil;
 
 
 public class EncomiendaController {
@@ -182,6 +182,15 @@ public class EncomiendaController {
                     "Seleccione una encomienda"
             );
 
+            return;
+        }
+        boolean confirmar =
+                AlertUtil.confirmar(
+                        "Eliminar",
+                        "¿Desea eliminar esta encomienda?"
+                );
+
+        if (!confirmar) {
             return;
         }
 
@@ -398,4 +407,18 @@ public class EncomiendaController {
                 filtradas
         );
     }
+
+    @FXML
+    private void exportarPdf() {
+
+        PdfUtil.exportar(
+                service.listar()
+        );
+
+        AlertUtil.mostrarInfo(
+                "Reporte PDF",
+                "PDF generado correctamente"
+        );
+    }
+
 }

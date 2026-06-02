@@ -97,6 +97,12 @@
                         <Button text="Actualizar Estado"
                                 onAction="#actualizarEstado"/>
 
+                        <Button text="Exportar PDF"
+                                onAction="#exportarPdf"/>
+
+
+
+
                     </children>
 
                 </HBox>

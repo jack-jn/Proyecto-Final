@@ -145,6 +145,16 @@ public class EditarEncomiendaController {
                     dpFecha.getValue().toString()
             );
 
+            boolean confirmar =
+                    AlertUtil.confirmar(
+                            "Actualizar",
+                            "¿Desea actualizar esta encomienda?"
+                    );
+
+            if (!confirmar) {
+                return;
+            }
+
             boolean actualizado =
                     service.actualizar(
                             encomienda
@@ -178,5 +188,13 @@ public class EditarEncomiendaController {
                     "Datos inválidos"
             );
         }
+    }
+
+    @FXML
+    private void cancelar() {
+
+        txtCodigo.getScene()
+                .getWindow()
+                .hide();
     }
 }

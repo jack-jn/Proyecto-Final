@@ -17,6 +17,21 @@ public class Encomienda {
     private String fechaEnvio;
 
     public Encomienda() {
+
+        this.codigo = codigo;
+        this.remitente = remitente;
+        this.destinatario = destinatario;
+        this.origen = origen;
+        this.destino = destino;
+        this.descripcion = descripcion;
+        this.peso = peso;
+        this.precio = precio;
+        this.estado = estado;
+        this.fechaEnvio = fechaEnvio;
+    }
+    public boolean esEntregada() {
+        return estado ==
+                EstadoEncomienda.ENTREGADO;
     }
 
     public Encomienda(int id, String codigo, String remitente,
@@ -126,4 +141,20 @@ public class Encomienda {
     public void setFechaEnvio(String fechaEnvio) {
         this.fechaEnvio = fechaEnvio;
     }
+
+    @Override
+    public String toString() {
+        return "Encomienda{" +
+                "id=" + id +
+                ", codigo='" + codigo + '\'' +
+                ", remitente='" + remitente + '\'' +
+                ", destinatario='" + destinatario + '\'' +
+                ", origen='" + origen + '\'' +
+                ", destino='" + destino + '\'' +
+                ", peso=" + peso +
+                ", precio=" + precio +
+                ", estado=" + estado +
+                '}';
+    }
+
 }

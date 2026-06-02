@@ -1,17 +1,14 @@
 package pe.edu.upeu.repository;
 
+import pe.edu.upeu.enums.EstadoEncomienda;
 import pe.edu.upeu.model.Encomienda;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import pe.edu.upeu.enums.EstadoEncomienda;
-
 import java.sql.ResultSet;
-import java.util.List;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class EncomiendaRepository {
 
@@ -51,7 +48,6 @@ public class EncomiendaRepository {
             return ps.executeUpdate() > 0;
 
         } catch (SQLException e) {
-
             e.printStackTrace();
         }
 
@@ -93,7 +89,6 @@ public class EncomiendaRepository {
             return ps.executeUpdate() > 0;
 
         } catch (SQLException e) {
-
             e.printStackTrace();
         }
 
@@ -115,7 +110,6 @@ public class EncomiendaRepository {
             return ps.executeUpdate() > 0;
 
         } catch (SQLException e) {
-
             e.printStackTrace();
         }
 
@@ -136,7 +130,6 @@ public class EncomiendaRepository {
             return ps.executeUpdate() > 0;
 
         } catch (SQLException e) {
-
             e.printStackTrace();
         }
 
@@ -228,7 +221,6 @@ public class EncomiendaRepository {
             }
 
         } catch (SQLException e) {
-
             e.printStackTrace();
         }
 
@@ -255,6 +247,7 @@ public class EncomiendaRepository {
 
         return 0;
     }
+
     public int contarPorEstado(String estado) {
 
         String sql =
